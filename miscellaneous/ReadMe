@@ -1,0 +1,195 @@
+# Tee Networks (Telecommunications) Website
+
+Welcome to the official website of **Tee Networks**, a fictional telecommunications company offering affordable and reliable communication services including international calls, data plans, and business packages.
+
+---
+
+## 🌐 Project Overview
+
+This is a static HTML/CSS website created to showcase Tee Networks’ services and promote user engagement. The website is ideal for academic, personal, or demonstration purposes and features key sections such as:
+
+- Company branding/logo
+- Navigation menu
+- About Us
+- Services overview
+- Testimonials
+- Contact information
+- Social media links
+
+---
+
+## 📁 Project Structure
+
+Tee-Networks-poe-part1/
+│
+├── index.html # Main homepage
+├── /pages/ # Subpages for more detailed sections
+│ ├── About us.html
+│ ├── services.html
+│ ├── gallery.html
+│ └── contact us.html
+│
+├── /CSS/
+│ └── styles.css # Stylesheet for the website
+│
+├── /Assets/
+│ ├── modern-flat-initial-t-letter-600w-2096186350.webp
+│ ├── s-l1600.webp
+│ ├── shopping.webp
+│ ├── Best-Credit-Card-for-Beginners-770x515 - Copy.webp
+│ ├── facebook-icon.png
+│ ├── twitter-icon.png
+│ ├── instagram-icon.png
+│ └── linkedin-icon.png
+
+yaml
+Copy code
+
+---
+
+## ✅ Features
+
+- Clean and structured layout
+- User-friendly navigation
+- Multiple service descriptions
+- Visual content with icons and images
+- Social media integration
+- Call-to-action buttons
+
+---
+
+## 🚀 How to Run the Website Locally
+
+1. Download or clone the repository.
+2. Open `index.html` with a web browser (Chrome, Firefox, Safari, etc.).
+3. Ensure that all asset paths are correct for images and CSS.
+
+---
+
+## 🛠️ Customization Notes
+
+- **Branding**: Replace the logo and service images with your business assets.
+- **Content**: Edit HTML text to reflect your real offerings and company information.
+- **Social Media**: Update the links to point to your actual profiles.
+
+---
+
+## 📌 To-Do (Suggestions)
+
+- [ ] Add responsive design with CSS media queries
+- [ ] Optimize image file sizes
+- [ ] Add a working contact form with validation and backend support
+- [ ] Include a favicon for brand identity
+
+---
+
+## 🙋‍♂️ Contact Information
+
+**Tee Networks (Telecommunications)**  
+📞 (+27)-76-895-6723  
+🌐 [Add your business domain if available]
+
+---
+
+## 🧾 License
+
+This project is for educational and demonstration purposes. No commercial use is permitted without permission.
+
+---
+
+## 📚 References
+
+The following resources were used in creating this website:
+
+### 🔗 Stock Images and Icons
+- **Logo Image**: [Shutterstock](https://www.shutterstock.com/image-vector/modern-flat-initial-t-letter-600w-2096186350.webp)
+- **Affordable Calls Image**: [eBay stock photo](https://www.ebay.com)
+- **Shopping Image**: Possibly from [Unsplash](https://unsplash.com) or other royalty-free source
+- **Business Package Image**: Placeholder image (source unknown; replace with original content if used commercially)
+- **Social Media Icons**: 
+  - Facebook: [iconarchive.com](https://www.iconarchive.com)
+  - Twitter: [iconarchive.com](https://www.iconarchive.com)
+  - Instagram: [iconarchive.com](https://www.iconarchive.com)
+  - LinkedIn: [iconarchive.com](https://www.iconarchive.com)
+
+### 🛠️ Web Development Tools
+- HTML5 and CSS3 via [MDN Web Docs](https://developer.mozilla.org/)
+- Visual Studio Code (Code editor)
+- Image formatting: [TinyPNG](https://tinypng.com)
+
+### 📘 Tutorials & Inspiration
+- [W3Schools - HTML/CSS Basics](https://www.w3schools.com/)
+- [freeCodeCamp.org](https://www.freecodecamp.org/)
+- [CSS-Tricks](https://css-tricks.com)
+
+> ⚠️ **Note**: Please ensure all image and icon usage complies with copyright rules. Replace any stock or watermarked content with properly licensed material for commercial use.
+
+---
+
+Thank you for checking out the Tee Networks project!
+# Tee Networks Website Project
+
+## Project Overview
+Tee Networks is a professional telecommunications website designed to showcase the company's services, team, gallery, and contact information. The website emphasizes **affordable global communication solutions** and provides a clean, modern, and responsive design suitable for desktops, tablets, and mobile devices.
+
+---
+
+## Features
+- **Home Page:** Welcoming section, services overview, testimonials, and call-to-action buttons.
+- **About Us Page:** Vision, mission, core values, and team members.
+- **Services Page:** Detailed service packages with descriptions and pricing.
+- **Gallery Page:** Responsive image gallery with hover effects.
+- **Contact Page:** Contact information, working hours, contact form, embedded map, and social media links.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- **Consistent Styling:** All pages share a cohesive color scheme, typography, and layout.
+
+---
+
+## Technologies Used
+- HTML5
+- CSS3 (Flexbox and Grid)
+- Responsive Web Design
+- Google Fonts and Icons
+- Embedded Google Maps
+
+---
+
+## How to View the Project
+1. Clone or download the repository.
+2. Open the `index.html` file in any modern web browser.
+3. Navigate through pages using the top navigation menu.
+
+---
+
+## Changelog
+
+| Date       | Version | Changes / Feedback Implemented |
+|----------- |-------- |-------------------------------|
+| 2025-09-23 | 1.0     | Initial project setup with Home, About, Services, Gallery, Contact pages. |
+| 2025-09-24 | 1.1     | Updated CSS for a professional and responsive layout across all pages. |
+| 2025-09-25 | 1.2     | Added extended About Us and Services pages with detailed content. |
+| 2025-09-25 | 1.3     | Created modern Contact page with contact form, social icons, and embedded map. |
+| 2025-09-25 | 1.4     | Developed responsive Gallery page with CSS Grid and hover effects. |
+| 2025-09-25 | 1.5     | Integrated all pages with a single CSS file for consistent styling. |
+
+---
+
+## References
+1. Mozilla Developer Network (MDN) Web Docs: [https://developer.mozilla.org](https://developer.mozilla.org)
+2. W3Schools HTML & CSS: [https://www.w3schools.com](https://www.w3schools.com)
+3. Google Fonts: [https://fonts.google.com](https://fonts.google.com)
+4. Font Awesome Icons: [https://fontawesome.com](https://fontawesome.com)
+
+---
+
+## Author
+**Tee** – Web Developer  
+Email: tanajay08@gmail.com  
+Location: South Africa
+
+---
+
+## Notes
+- Ensure that all assets (images, CSS, etc.) are correctly linked for the website to render properly.
+- Tested for compatibility on modern browsers including Chrome, Edge, and Firefox.
+- Fully responsive design using relative units, media queries, and CSS Grid/Flexbox.
