@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
      CONTACT FORM VALIDATION
      (for contact us.html)
      =========================== */
+     //form validation
   const contactForm = document.querySelector("form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
