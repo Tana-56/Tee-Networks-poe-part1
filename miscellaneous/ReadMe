@@ -193,3 +193,123 @@ Location: South Africa
 - Ensure that all assets (images, CSS, etc.) are correctly linked for the website to render properly.
 - Tested for compatibility on modern browsers including Chrome, Edge, and Firefox.
 - Fully responsive design using relative units, media queries, and CSS Grid/Flexbox.
+
+# Tee Networks Website – Enhancements Documentation
+
+## Overview
+
+This project is a modernized version of the Tee Networks website. The updates include significant improvements to **JavaScript functionality, CSS styling, image adjustments, and overall page design** to create a professional, visually appealing, and user-friendly experience.
+
+---
+
+## 1. JavaScript Enhancements
+
+The following JavaScript features have been added to improve interactivity and user experience:
+
+### a) Animations
+- **Fade-in animations** for page sections and cards as the user scrolls.
+- **Hover effects** on images and buttons for a dynamic feel.
+- Smooth transitions on service and gallery cards to make the site interactive.
+
+### b) Interactive Components
+- **Testimonials** appear with smooth transitions.
+- **Navigation highlight** updates dynamically based on the current section (active link highlight).
+- Optional scripts can be extended for **form validation**, **popup confirmations**, and **animated icons**.
+
+---
+
+## 2. CSS Enhancements
+
+The CSS has been rewritten and enhanced to provide a **clean, modern, and responsive design**:
+
+### a) General Styling
+- Updated **font-family** for headings (`Montserrat`) and body text (`Segoe UI`).
+- Consistent **color palette** using blues (#0073e6, #00ccff) and white for a professional look.
+- Smooth **hover effects** for buttons, cards, and social icons.
+
+### b) Hero Sections
+- Gradient backgrounds with rounded corners.
+- Hero images have shadows, rounded edges, and hover scale effects.
+
+### c) Cards & Layout
+- **Service cards, gallery cards, team member cards, and contact info cards** have uniform sizing, shadows, and hover lift effects.
+- Grid layout ensures **responsive alignment** for all devices.
+- Rounded corners and subtle shadows create a modern “material design” feel.
+
+### d) Forms
+- Contact form styled with rounded input fields and focus glow effects.
+- Submit button styled with gradient and scale-on-hover animation.
+
+### e) Gallery & Images
+- All images standardized to consistent widths and heights using `object-fit: cover`.
+- Rounded corners and shadows applied to all images.
+- Hover zoom effect added for **interactive galleries and service sections**.
+
+### f) Footer
+- Social icons styled with hover scale and color change.
+- Footer background consistent with branding.
+
+---
+
+## 3. Picture Adjustments
+
+- **Uniform image sizes** for hero, gallery, services, and team sections.
+- Rounded corners and **box shadows** for depth.
+- Hover zoom effect added to make images more interactive.
+- Hero and gallery images adjusted for **responsive scaling**.
+- Optimized image display using `object-fit: cover` to maintain aspect ratios.
+
+---
+
+## 4. Responsive Design
+
+- All pages are fully **mobile-friendly**.
+- Grid layouts adapt to smaller screens.
+- Buttons, cards, and images resize proportionally for tablets and mobile devices.
+
+---
+
+## 5. Future Enhancements
+
+- Add scroll-triggered animations using JavaScript for more interactive content.
+- Implement form validation and success notifications.
+- Add animated background effects for hero sections.
+- Integrate dynamic gallery with lightbox feature.
+
+---
+
+## Summary
+
+These enhancements collectively:
+
+- Improve the visual aesthetics of the website.
+- Make the website interactive and dynamics using JavaScript.
+- Ensure consistency across pages with CSS adjustments.
+- Standardize image sizes and styles for a professional look.
+- Provide a responsive, mobile-friendly layout.
+
+The result is a modern, professional, and visually appealing website for Tee Networks.
+
+---
+
+Project Structure:
+
+Tee-Networks/
+├─ index.html
+├─ pages/
+│ ├─ About us.html
+│ ├─ services.html
+│ ├─ gallery.html
+│ └─ contact us.html
+├─ CSS/
+│ └─ styles.css
+├─ js/
+│ └─ script.js
+├─ Assets/
+│ ├─ images (all optimized images)
+│ └─ icons
+└─ README.md
+
+---
+Prepared by: Tee Networks Web Team  *Date:24 October 2025
+
