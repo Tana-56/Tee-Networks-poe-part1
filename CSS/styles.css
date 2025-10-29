@@ -1460,3 +1460,457 @@ footer p {
     width: 150px;
   }
 }
+/* Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #002147;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #00b4d8;
+}
+
+/* Enquiry Section */
+.enquiry-section {
+  max-width: 700px;
+  margin: 3em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  color: #002147;
+  margin-bottom: 10px;
+}
+
+.enquiry-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  background-color: #002147;
+  color: white;
+  text-align: center;
+  padding: 0.9em;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00b4d8;
+}
+
+/* Response Message */
+#responseMsg {
+  text-align: center;
+  margin-top: 1.2em;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #002147;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-icons a:hover {
+  color: #00b4d8;
+}
+/* Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #002147;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #00b4d8;
+}
+
+/* Enquiry Section */
+.enquiry-section {
+  max-width: 700px;
+  margin: 3em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  color: #002147;
+  margin-bottom: 10px;
+}
+
+.enquiry-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  background-color: #002147;
+  color: white;
+  text-align: center;
+  padding: 0.9em;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00b4d8;
+}
+
+/* Response Message */
+#responseMsg {
+  text-align: center;
+  margin-top: 1.2em;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #002147;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-icons a:hover {
+  color: #00b4d8;
+}
+/* =========================================
+   TEE NETWORKS - ENQUIRY PAGE STYLESHEET
+   ========================================= */
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f5faff, #eaf3ff);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #002147;
+  color: white;
+  padding: 1.2em 0;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00b4d8;
+}
+
+/* ===== Enquiry Section ===== */
+.enquiry-section {
+  background: #ffffff;
+  max-width: 750px;
+  margin: 4em auto;
+  padding: 3em 2.5em;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  color: #002147;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+}
+
+.enquiry-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2em;
+  font-size: 1.05em;
+}
+
+/* ===== Form Layout ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  color: #002147;
+  margin-bottom: 0.5em;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.9em;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 6px rgba(0, 180, 216, 0.4);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== Button ===== */
+.cta-button {
+  background: #002147;
+  color: white;
+  border: none;
+  padding: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #00b4d8;
+  transform: translateY(-2px);
+}
+
+/* ===== Response Message ===== */
+#responseMsg {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #002147;
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 4em;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00b4d8;
+}
+
+footer p {
+  margin-top: 1em;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .enquiry-section {
+    margin: 2em 1em;
+    padding: 2em;
+  }
+
+  .cta-button {
+    font-size: 1em;
+  }
+}
+
+/* Feedback Message Animation */
+.fadeIn {
+  animation: fadeInMsg 0.5s ease;
+}
+
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

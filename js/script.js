@@ -248,3 +248,203 @@ buttons.forEach(btn => {
     btn.style.setProperty("--y", `${y}px`);
   });
 });
+document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
+  const responseMsg = document.getElementById('responseMsg');
+
+  // Validation
+  if (!name || !email || !service || !message) {
+    responseMsg.style.color = 'red';
+    responseMsg.textContent = '⚠️ Please fill out all fields before submitting.';
+    return;
+  }
+
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!email.match(emailPattern)) {
+    responseMsg.style.color = 'red';
+    responseMsg.textContent = '⚠️ Please enter a valid email address.';
+    return;
+  }
+
+  // Simulated success message
+  responseMsg.style.color = 'green';
+  responseMsg.textContent = '✅ Thank you! Your enquiry has been submitted successfully.';
+
+  // Reset form after short delay
+  setTimeout(() => {
+    document.getElementById('enquiryForm').reset();
+  }, 2000);
+});
+
+// ==============================
+// Tee Networks - Enquiry Validation Script
+// ==============================
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('enquiryForm');
+  const responseMsg = document.getElementById('responseMsg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get input values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
+
+    // Clear old styles/messages
+    responseMsg.textContent = '';
+    responseMsg.style.display = 'none';
+    clearErrors();
+
+    // Validation checks
+    let isValid = true;
+
+    if (name.length < 3) {
+      showError('name', 'Please enter your full name (at least 3 characters).');
+      isValid = false;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+    if (!email.match(emailPattern)) {
+      showError('email', 'Please enter a valid email address.');
+      isValid = false;
+    }
+
+    if (service === '') {
+      showError('service', 'Please select a service of interest.');
+      isValid = false;
+    }
+
+    if (message.length < 10) {
+      showError('message', 'Your message should be at least 10 characters long.');
+      isValid = false;
+    }
+
+    // If form is valid
+    if (isValid) {
+      responseMsg.style.display = 'block';
+      responseMsg.style.color = 'green';
+      responseMsg.textContent = '✅ Thank you! Your enquiry has been submitted successfully.';
+      responseMsg.classList.add('fadeIn');
+
+      // Reset form after short delay
+      setTimeout(() => {
+        form.reset();
+        responseMsg.style.display = 'none';
+      }, 3000);
+    } else {
+      // If invalid, show error summary
+      responseMsg.style.display = 'block';
+      responseMsg.style.color = 'red';
+      responseMsg.textContent = '⚠️ Please correct the highlighted fields before submitting.';
+    }
+  });
+
+  // ===== Helper Functions =====
+
+  // Show specific field error
+  function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    field.style.borderColor = 'red';
+    field.style.backgroundColor = '#ffe5e5';
+    field.insertAdjacentHTML('afterend', `<small class="error-text" style="color:red;">${message}</small>`);
+  }
+
+  // Remove error highlights and texts
+  function clearErrors() {
+    document.querySelectorAll('.error-text').forEach(el => el.remove());
+    document.querySelectorAll('input, select, textarea').forEach(el => {
+      el.style.borderColor = '#ccc';
+      el.style.backgroundColor = '#fff';
+    });
+  }
+});
+
+// ==============================
+// Tee Networks - Enquiry Validation Script (Stable)
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("enquiryForm");
+  const responseMsg = document.getElementById("responseMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get field values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    // Reset styles and messages
+    clearErrors();
+    responseMsg.textContent = "";
+    responseMsg.style.display = "none";
+
+    let valid = true;
+
+    // Validate Name
+    if (name.length < 3) {
+      markError("name");
+      valid = false;
+    }
+
+    // Validate Email
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+    if (!email.match(emailPattern)) {
+      markError("email");
+      valid = false;
+    }
+
+    // Validate Service
+    if (service === "") {
+      markError("service");
+      valid = false;
+    }
+
+    // Validate Message
+    if (message.length < 10) {
+      markError("message");
+      valid = false;
+    }
+
+    // Show Results
+    if (!valid) {
+      responseMsg.style.display = "block";
+      responseMsg.style.color = "red";
+      responseMsg.textContent = "⚠️ Please fill in all fields correctly before submitting.";
+    } else {
+      responseMsg.style.display = "block";
+      responseMsg.style.color = "green";
+      responseMsg.textContent = "✅ Thank you! Your enquiry has been submitted successfully.";
+      form.reset();
+
+      // Hide message after a few seconds
+      setTimeout(() => {
+        responseMsg.style.display = "none";
+      }, 3000);
+    }
+  });
+
+  // Helper functions
+  function markError(id) {
+    const el = document.getElementById(id);
+    el.style.borderColor = "red";
+    el.style.backgroundColor = "#ffe5e5";
+  }
+
+  function clearErrors() {
+    document.querySelectorAll("input, select, textarea").forEach((el) => {
+      el.style.borderColor = "#ccc";
+      el.style.backgroundColor = "#fff";
+    });
+  }
+});

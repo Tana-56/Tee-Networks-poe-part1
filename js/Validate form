@@ -1,0 +1,28 @@
+function  validateForm(){
+const name= document.getElementById('name').value;
+const email=document.getElementById ('email').value; 
+const password=document.getElementById('password') .value; 
+const errorMessage=document.getElementById('errorMessage')
+
+errorMessage.textContent = '';
+//Validate all input fields
+if(name ==='' || email ===''|| password === ''){
+errorMessage.textContent='All inputs are required!!!!';
+return false;
+}
+
+//validate email
+const emailPattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
+if(!email.match(emailPattern)){
+    errorMessage.textContent='incorrect email format !!!';
+    return false;
+}
+
+//Validate password (must be atleast 6 characters)
+if(password .length < 6){
+    errorMessage.textContent='Password must be atleast 6 characters!!!';
+return false;
+}
+alert("form was submited successfully!!!");
+return true;
+}
