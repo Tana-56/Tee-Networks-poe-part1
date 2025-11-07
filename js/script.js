@@ -448,3 +448,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// Enquiry Form Validation and Feedback
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("enquiryForm");
+  const messageBox = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !service || !message) {
+      showMessage("Please fill in all required fields.", "error");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      showMessage("Please enter a valid email address.", "error");
+      return;
+    }
+
+    // Success message
+    showMessage("Thank you! Your enquiry has been submitted successfully.", "success");
+    form.reset();
+  });
+
+  function showMessage(msg, type) {
+    messageBox.textContent = msg;
+    messageBox.classList.remove("hidden");
+    messageBox.style.color = type === "success" ? "green" : "red";
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+});
