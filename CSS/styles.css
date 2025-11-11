@@ -1965,100 +1965,7 @@ nav ul li a.active {
   color: #ffcb05;
 }
 
-/* Enquiry Form Section */
-.enquiry-section {
-  background-color: #fff;
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.enquiry-section h2 {
-  text-align: center;
-  color: #004aad;
-  margin-bottom: 15px;
-}
-
-.enquiry-section p {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #333;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #004aad;
-  outline: none;
-}
-
-/* Button */
-.cta-button {
-  display: inline-block;
-  background-color: #004aad;
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #003380;
-}
-
-/* Message */
-#formMessage {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Footer */
-footer {
-  background-color: #004aad;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 60px;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.social-icons a:hover {
-  color: #ffcb05;
-}
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -2066,30 +1973,36 @@ footer {
   font-family: "Poppins", sans-serif;
 }
 
-/* Body */
+/* BODY */
 body {
-  background-color: #f4f7fc;
-  color: #333;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #004aad, #0071e3, #4ac7ff);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
+/* HEADER */
 header {
-  background-color: #004aad;
+  background: rgba(0, 0, 0, 0.3);
   padding: 15px 0;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 nav {
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 nav h1 {
-  color: #fff;
   font-size: 1.8rem;
+  color: #ffcb05;
 }
 
 nav ul {
@@ -2101,8 +2014,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
@@ -2110,105 +2022,129 @@ nav ul li a.active {
   color: #ffcb05;
 }
 
-/* Enquiry Section */
+/* ENQUIRY FORM */
 .enquiry-section {
-  background-color: #fff;
-  max-width: 700px;
-  margin: 60px auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.enquiry-card {
+  background: rgba(255, 255, 255, 0.1);
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
 }
 
-.enquiry-section h2 {
-  color: #004aad;
+.enquiry-card h2 {
+  color: #ffcb05;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.enquiry-section p {
+.enquiry-card p {
   text-align: center;
-  margin-bottom: 30px;
-  color: #555;
+  margin-bottom: 25px;
+  color: #1903db;
 }
 
-/* Form */
-.enquiry-form {
+form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.enquiry-form label {
-  margin-bottom: 8px;
+label {
   font-weight: 600;
-  color: #333;
+  font-size: 0.95rem;
 }
 
-.enquiry-form input,
-.enquiry-form select,
-.enquiry-form textarea {
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.enquiry-form input:focus,
-.enquiry-form select:focus,
-.enquiry-form textarea:focus {
-  border-color: #004aad;
-  outline: none;
-}
-
-/* Button */
-.cta-button {
-  background-color: #004aad;
-  color: white;
-  padding: 12px;
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
   font-size: 1rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 203, 5, 0.7);
+}
+
+/* ERROR & SUCCESS MESSAGES */
+.error {
+  color: #ff4444;
+  font-size: 0.85rem;
+  display: none;
+}
+
+.success {
+  color: #00e676;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  display: none;
+}
+
+/* BUTTON */
+.cta-button {
+  background: linear-gradient(90deg, #0533ff, #078ce4);
+  color: #004aad;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #003380;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 203, 5, 0.4);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  background-color: #004aad;
-  color: #fff;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
   padding: 20px 0;
-  margin-top: 80px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
 }
 
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: 0.3s;
+/* ANIMATIONS */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.social-icons a:hover {
-  color: #ffcb05;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  .enquiry-card {
+    padding: 25px;
   }
 
-  .enquiry-section {
-    width: 90%;
-    padding: 25px;
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
