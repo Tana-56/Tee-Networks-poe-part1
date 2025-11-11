@@ -1,28 +1,69 @@
-function  validateForm(){
-const name= document.getElementById('name').value;
-const email=document.getElementById ('email').value; 
-const password=document.getElementById('password') .value; 
-const errorMessage=document.getElementById('errorMessage')
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("enquiryForm");
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const subject = document.getElementById("subject");
+  const message = document.getElementById("message");
+  const successMsg = document.getElementById("successMessage");
 
-errorMessage.textContent = '';
-//Validate all input fields
-if(name ==='' || email ===''|| password === ''){
-errorMessage.textContent='All inputs are required!!!!';
-return false;
-}
+  // Error labels
+  const errors = {
+    name: document.getElementById("nameError"),
+    email: document.getElementById("emailError"),
+    subject: document.getElementById("subjectError"),
+    message: document.getElementById("messageError"),
+  };
 
-//validate email
-const emailPattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
-if(!email.match(emailPattern)){
-    errorMessage.textContent='incorrect email format !!!';
-    return false;
-}
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
 
-//Validate password (must be atleast 6 characters)
-if(password .length < 6){
-    errorMessage.textContent='Password must be atleast 6 characters!!!';
-return false;
-}
-alert("form was submited successfully!!!");
-return true;
-}
+    // Name
+    if (name.value.trim().length < 3) {
+      errors.name.textContent = "Please enter at least 3 characters.";
+      errors.name.style.display = "block";
+      valid = false;
+    } else {
+      errors.name.style.display = "none";
+    }
+
+    // Email
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.value.match(emailPattern)) {
+      errors.email.textContent = "Please enter a valid email address.";
+      errors.email.style.display = "block";
+      valid = false;
+    } else {
+      errors.email.style.display = "none";
+    }
+
+    // Subject
+    if (subject.value.trim() === "") {
+      errors.subject.textContent = "Subject cannot be empty.";
+      errors.subject.style.display = "block";
+      valid = false;
+    } else {
+      errors.subject.style.display = "none";
+    }
+
+    // Message
+    if (message.value.trim().length < 10) {
+      errors.message.textContent = "Message must be at least 10 characters.";
+      errors.message.style.display = "block";
+      valid = false;
+    } else {
+      errors.message.style.display = "none";
+    }
+
+    // If valid, show success message
+    if (valid) {
+      successMsg.textContent = "✅ Thank you! Your enquiry has been submitted successfully.";
+      successMsg.style.display = "block";
+      form.reset();
+
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 4000);
+    }
+  });
+});
