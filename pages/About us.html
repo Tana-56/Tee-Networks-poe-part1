@@ -7,56 +7,60 @@
   <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
-<!-- Header -->
+
+  <!-- Header -->
   <header>
     <nav>
       <h1>Tee Networks</h1>
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="./About us.html">About</a></li>
+        <li><a href="./About us.html" class="active">About</a></li>
         <li><a href="./services.html">Services</a></li>
         <li><a href="./gallery.html">Gallery</a></li>
         <li><a href="./contact us.html">Contact</a></li>
-        <li><a href="./Enquiries.html">Enquires</a></li>
+        <li><a href="./Enquiries.html">Enquiries</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-
-    <!-- Hero / Banner -->
-    <section id="hero">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
       <h2>About Tee Networks</h2>
       <p>Connecting the world through reliable and affordable telecommunications solutions.</p>
       <img src="../Assets/international-sim-cards-with-flags-isolated-on-white-background-FB3BRY.jpg" alt="Tee Networks Team">
-    </section>
+    </div>
+  </section>
 
-    <!-- Our Vision -->
-    <section id="vision">
-      <h2>Our Vision</h2>
+  <!-- Accordion Section -->
+  <section class="accordion-section">
+    <h2>Who We Are</h2>
+
+    <button class="accordion">Our Vision</button>
+    <div class="panel">
       <p>Our vision is to become the leading global SIM provider, ensuring everyone stays connected with loved ones across the world. We aim to make communication simple, fast, and affordable—globally, not just in South Africa.</p>
-    </section>
+    </div>
 
-    <!-- Our Mission -->
-    <section id="mission">
-      <h2>Our Mission</h2>
+    <button class="accordion">Our Mission</button>
+    <div class="panel">
       <p>We strive to provide high-quality, affordable SIM card services with competitive packages tailored for personal, business, and international communication needs. Our mission is to remove barriers, making communication effortless for everyone.</p>
-    </section>
+    </div>
 
-    <!-- Our Values -->
-    <section id="values">
-      <h2>Our Core Values</h2>
+    <button class="accordion">Our Core Values</button>
+    <div class="panel">
       <ul>
         <li><strong>Customer-Centric:</strong> Prioritizing your needs and satisfaction.</li>
         <li><strong>Innovation:</strong> Continuously improving technology solutions.</li>
         <li><strong>Integrity:</strong> Honest, transparent, and ethical practices.</li>
         <li><strong>Reliability:</strong> Services you can count on 24/7.</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- Team Members -->
-    <section id="team">
-      <h2>Meet Our Partners</h2>
+  <!-- Team Section -->
+  <section id="team">
+    <h2>Meet Our Partners</h2>
+    <div class="team-grid">
       <div class="team-member">
         <img src="../Assets/Collage-Maker-18-Nov-2022-05.58-PM-1.jpg" alt="Mr Rob Burrell">
         <h3>Mr Rob Burrell</h3>
@@ -67,16 +71,15 @@
         <h3>Mr Michiel Le Roux</h3>
         <p>Founder of Capitec and co-founder of Tee Networks</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Call to Action -->
-    <section id="about-cta">
-      <h2>Join Tee Networks Today</h2>
-      <p>Discover affordable solutions for personal or business communication.</p>
-      <a href="./contact us.html" class="cta-button">Contact Us</a>
-    </section>
-
-  </main>
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Join Tee Networks Today</h2>
+    <p>Discover affordable solutions for personal or business communication.</p>
+    <a href="./contact us.html" class="cta-button">Contact Us</a>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -88,9 +91,7 @@
     </div>
     <p>&copy; 2025 Tee Networks (Telecommunications). All rights reserved.</p>
   </footer>
-
-    <script src="../js/script.js"></script>
-
-  </footer>
-
-
+  <script src="../js/script.js"></script>
+  <script src="../js/acc.js"></script>
+</body>
+</html>

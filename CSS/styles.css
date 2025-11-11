@@ -2148,3 +2148,258 @@ footer {
     justify-content: center;
   }
 }
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #004aad, #0071e3, #4ac7ff);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #ffcb05;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcb05;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  width: 70%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ACCORDIONS */
+.accordion-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.accordion-section h2 {
+  text-align: center;
+  color: #ffcb05;
+  margin-bottom: 20px;
+}
+
+.accordion {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.accordion:hover {
+  background-color: rgba(255, 203, 5, 0.3);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: rgba(255, 255, 255, 0.05);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.panel p,
+.panel ul {
+  margin: 15px 0;
+}
+
+.accordion.active + .panel {
+  max-height: 400px;
+  padding: 15px 18px;
+}
+
+/* TEAM SECTION */
+#team {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cta h2 {
+  color: #ffcb05;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ffcb05, #ffd84d);
+  color: #004aad;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ANIMATION */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* FORM STYLING */
+#contact-form {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+}
+
+#contact-form h2 {
+  text-align: center;
+  color: #ffcb05;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ffcb05;
+}
+
+.error {
+  border-color: #ff4d4d !important;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
+}
+
+#form-feedback {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+#form-feedback.success {
+  color: #00ff88;
+}
+
+#form-feedback.error {
+  color: #ff4d4d;
+}
