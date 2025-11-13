@@ -313,3 +313,136 @@ Tee-Networks/
 ---
 Prepared by: Tee Networks Web Team  *Date:24 October 2025
 
+📞 Tee Networks — Enquiries & Contact Form
+🧩 Overview
+
+This project contains the Enquiries Page for Tee Networks, built using HTML, CSS, and JavaScript.
+The page allows users to submit their enquiries through a modern, validated form with smooth styling and responsive design.
+
+🌐 Page Description
+
+The Enquiries Page lets users:
+
+Enter their full name, email address, subject, and message.
+
+Get real-time validation before submission.
+
+See visual feedback for successful or invalid inputs.
+
+Experience a clean, responsive design that adapts to all devices.
+
+🖼️ File Structure
+Tee-Networks/
+│
+├── index.html
+├── pages/
+│   ├── About us.html
+│   ├── services.html
+│   ├── gallery.html
+│   ├── contact us.html
+│   └── Enquiries.html
+│
+├── CSS/
+│   └── styles.css
+│
+├── js/
+│   ├── script.js
+│   └── validateForm.js
+│
+└── Assets/
+    └── (images, logos, and media)
+
+🎨 CSS (styles.css)
+
+The CSS file provides modern styling for the Enquiries page, including:
+
+A centered enquiry card with rounded corners and shadows.
+
+Soft background gradient and glassmorphism-style effects.
+
+Input focus transitions for better user experience.
+
+Distinct colors for success and error states.
+
+Example CSS snippet:
+
+.enquiry-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+input:focus, textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+}
+
+⚙️ JavaScript (validateForm.js)
+
+The validation script ensures the form is filled out correctly before submission.
+
+✅ Features:
+
+Checks for empty fields.
+
+Validates proper email format.
+
+Ensures the message has at least 10 characters.
+
+Shows instant visual feedback and prevents form submission if errors exist.
+
+Example JavaScript snippet:
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const feedback = document.getElementById("form-feedback");
+
+  if (!name || !email || !message) {
+    feedback.textContent = "⚠️ Please fill in all required fields.";
+    feedback.style.color = "#ff4d4d";
+    return;
+  }
+
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!email.match(emailPattern)) {
+    feedback.textContent = "❌ Please enter a valid email address.";
+    feedback.style.color = "#ff4d4d";
+    return;
+  }
+
+  if (message.length < 10) {
+    feedback.textContent = "📝 Message must be at least 10 characters long.";
+    feedback.style.color = "#ff4d4d";
+    return;
+  }
+
+  feedback.textContent = "✅ Your enquiry has been submitted successfully!";
+  feedback.style.color = "#00c853";
+  document.getElementById("contactForm").reset();
+});
+
+💡 How It Works
+
+Open Enquiries.html in your browser.
+
+Fill in your name, email, subject, and message.
+
+Try submitting with invalid details — you’ll see error messages.
+
+Correct your inputs and submit again — a success message will appear.
+
+📱 Responsive Design
+
+The form automatically adapts to smaller screens.
+
+Buttons and inputs resize for mobile use.
+
+No overlapping or disappearing text on any device.

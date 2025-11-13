@@ -1,135 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Tee Networks</title>
-  <link rel="stylesheet" href="../CSS/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Tee Networks</title>
+  <meta name="description" content="Contact Tee Networks for support, sales or partnership enquiries. Use the contact form or find our office locations." />
+  <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
-
-<!-- Header -->
-  <header>
-    <nav>
-      <h1>Tee Networks</h1>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./About us.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./contact us.html">Contact</a></li>
-        <li><a href="./Enquiries.html">Enquiries</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="../assets/hero.webp" alt="Tee Networks logo" class="logo" />
+        <h1 class="brand-title">Tee Networks</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="enquiries.html">Enquiries</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <h2>Get in Touch</h2>
-      <p>We’re here to help you stay connected. Reach out for inquiries, support, or partnerships.</p>
-      <img src="../Assets/creative-network-computer-logo-design-260nw-1575320914.webp" alt="Contact Tee Networks" />
-    </section>
+  <main class="container narrow">
+    <h2>Contact Us</h2>
 
-    <!-- Contact Info -->
-    <section id="contact-info">
-      <h2>Our Contact Information</h2>
-      <div class="contact-cards">
-        <div class="card">
-          <h3>Address</h3>
-          <p>130 De Wet Street, Flora Park, Polokwane, South Africa</p>
-        </div>
-        <div class="card">
-          <h3>Phone</h3>
-          <p>(+27) 76-895-6723</p>
-        </div>
-        <div class="card">
-          <h3>Email</h3>
-          <p><a href="mailto:tanajay08@gmail.com">tanajay08@gmail.com</a></p>
-        </div>
-      </div>
-    </section>
+    <form id="contactForm" class="form-card" novalidate>
+      <label for="contactName">Full name</label>
+      <input id="contactName" type="text" required />
 
-   <!-- Contact Form -->
-<section id="contact-form">
-  <h2>Send Us a Message</h2>
-  <form id="contactForm" novalidate>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-      <small class="error-message"></small>
-    </div>
+      <small class="input-error" id="contactNameError"></small>
 
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-      <small class="error-message"></small>
-    </div>
+      <label for="contactEmail">Email address</label>
+      <input id="contactEmail" type="email" required />
+      <small class="input-error" id="contactEmailError"></small>
 
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-      <small class="error-message"></small>
-    </div>
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" rows="6" required></textarea>
+      <small class="input-error" id="contactMessageError"></small>
 
-    <button type="submit" class="cta-button">Send Message</button>
-    <p id="form-feedback"></p>
-  </form>
-</section>
-
-
-    <!-- Working Hours -->
-    <section id="working-hours">
-      <h2>Working Hours</h2>
-      <p>Monday to Friday: 8:00am – 6:00pm</p>
-      <p>Saturday: 9:30am – 3:00pm</p>
-      <p>Sunday: Closed</p>
-      <p>Public Holidays: 9:00am – 2:00pm</p>
-    </section>
-
-    <!-- Map Section -->
-    <section id="map">
-      <h2>Our Location</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.397752708473!2d29.50158597618336!3d-23.910965478561174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d7520198324b%3A0x87db557cb40a532f!2s130%20De%20Wet%20Dr%2C%20Flora%20Park%2C%20Polokwane%2C%200699%2C%20South%20Africa!5e0!3m2!1sen!2sie!4v1755867547267!5m2!1sen!2sie"
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </section>
-
-    <!-- Social Media -->
-    <section id="contact-social">
-      <h2>Follow Us</h2>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-    </section>
-
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p id="contactResult" class="form-result" aria-live="polite"></p>
+    </form>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Tee Networks</div>
+      <div>Local time: <span id="footerTime">--:--:--</span></div>
     </div>
-    <p>&copy; 2025 Tee Networks (Telecommunications). All rights reserved.</p>
   </footer>
 
-    <script src="../js/script.js"></script>
-<script src="../js/contact val.js"></script>
-
-  </footer>
-
+  <script src="../js/validate.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
 

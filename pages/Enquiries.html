@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enquiries - Tee Networks</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enquiries | Tee Networks</title>
+  <meta name="description" content="Send us your enquiries about SIMs, business plans, or partnerships. We will reply within 48 hours." />
   <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <nav>
-      <h1>Tee Networks</h1>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./About us.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./contact us.html">Contact</a></li>
-        <li><a href="./Enquiries.html" class="active">Enquiries</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="../assets/hero.webp" alt="Tee Networks" class="logo" />
+        <h1 class="brand-title">Tee Networks</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiries.html" class="active">Enquiries</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Enquiry Section -->
-  <section class="enquiry-section">
-    <div class="enquiry-card">
-      <h2>Submit an Enquiry</h2>
-      <p>Have a question or request? Complete the form below, and our support team will get back to you soon.</p>
-      
-      <form id="enquiryForm" novalidate>
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
-        <small class="error" id="nameError"></small>
+  <main class="container narrow">
+    <h2>Enquiry</h2>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required />
-        <small class="error" id="emailError"></small>
+    <form id="enquiryForm" class="form-card" novalidate>
+      <label for="enqName">Full name</label>
+      <input id="enqName" type="text" required />
+      <small class="input-error" id="enqNameError"></small>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
-        <small class="error" id="subjectError"></small>
+      <label for="enqEmail">Email</label>
+      <input id="enqEmail" type="email" required />
+      <small class="input-error" id="enqEmailError"></small>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
-        <small class="error" id="messageError"></small>
+      <label for="enqTopic">Topic</label>
+      <input id="enqTopic" type="text" required />
+      <small class="input-error" id="enqTopicError"></small>
 
-        <button type="submit" class="cta-button">Submit Enquiry</button>
-        <p id="successMessage" class="success"></p>
-      </form>
+      <label for="enqMessage">Message</label>
+      <textarea id="enqMessage" rows="6" required></textarea>
+      <small class="input-error" id="enqMessageError"></small>
+
+      <button type="submit" class="btn btn-primary">Submit enquiry</button>
+      <p id="enquiryResult" class="form-result" aria-live="polite"></p>
+    </form>
+
+    <section class="faq">
+      <h3>Quick FAQ</h3>
+      <button class="accordion-btn">What if my SIM doesn't work?</button>
+      <div class="accordion-panel"><p>Contact support with your SIM serial and we’ll troubleshoot within one business day.</p></div>
+
+      <button class="accordion-btn">Do you ship internationally?</button>
+      <div class="accordion-panel"><p>We provide international shipping and local pickup options depending on your location.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Tee Networks</div>
+      <div>Local time: <span id="footerTime2">--:--:--</span></div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Tee Networks (Telecommunications). All rights reserved.</p>
   </footer>
-<script src="../js/script.js"></script>
-  <script src="../js/Validate form"></script>
+
+  <script src="../js/validate.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
+

@@ -67,3 +67,74 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// validate.js
+document.addEventListener('DOMContentLoaded', () => {
+  // Utility email regex
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Shared validator function
+  function setupForm(formId, inputs) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      inputs.forEach(inp => {
+        const el = document.getElementById(inp.id);
+        const err = document.getElementById(inp.errorId);
+        if (!el) return;
+        err.textContent = '';
+        el.classList.remove('input-invalid');
+
+        const val = el.value.trim();
+        if (inp.required && !val) {
+          err.textContent = inp.requiredMsg || 'This field is required';
+          el.classList.add('input-invalid');
+          valid = false;
+          return;
+        }
+        if (inp.type === 'email' && val && !emailPattern.test(val)) {
+          err.textContent = inp.invalidMsg || 'Please enter a valid email';
+          el.classList.add('input-invalid');
+          valid = false;
+        }
+        if (inp.minLength && val.length < inp.minLength) {
+          err.textContent = inp.minMsg || `Must be at least ${inp.minLength} characters`;
+          el.classList.add('input-invalid');
+          valid = false;
+        }
+      });
+
+      const resultEl = form.querySelector('.form-result') || document.getElementById(formId === 'contactForm' ? 'contactResult' : 'enquiryResult');
+      if (!resultEl) return;
+
+      if (!valid) {
+        resultEl.textContent = '⚠️ Please fix the errors above.';
+        resultEl.style.color = '#b91c1c';
+        return;
+      }
+
+      // Simulate successful submission (placeholder for server integration)
+      resultEl.textContent = '✅ Thank you — your message has been received.';
+      resultEl.style.color = '#0f9d58';
+      form.reset();
+    });
+  }
+
+  // Contact form setup
+  setupForm('contactForm', [
+    { id: 'contactName', errorId: 'contactNameError', required: true, requiredMsg: 'Please enter your name' },
+    { id: 'contactEmail', errorId: 'contactEmailError', required: true, type: 'email', invalidMsg: 'Enter a valid email' },
+    { id: 'contactMessage', errorId: 'contactMessageError', required: true, minLength: 10, minMsg: 'Message must be at least 10 characters' }
+  ]);
+
+  // Enquiry form setup
+  setupForm('enquiryForm', [
+    { id: 'enqName', errorId: 'enqNameError', required: true },
+    { id: 'enqEmail', errorId: 'enqEmailError', required: true, type: 'email' },
+    { id: 'enqTopic', errorId: 'enqTopicError', required: true },
+    { id: 'enqMessage', errorId: 'enqMessageError', required: true, minLength: 10 }
+  ]);
+});

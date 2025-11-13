@@ -486,3 +486,97 @@ document.addEventListener("DOMContentLoaded", function() {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 });
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) Search filter for cards (header inputs)
+  const globalSearch = document.getElementById('globalSearch') || document.getElementById('servicesSearch') || document.getElementById('searchBar') || document.getElementById('searchAbout');
+  if (globalSearch) {
+    globalSearch.addEventListener('input', () => {
+      const q = globalSearch.value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const title = (card.dataset.title || card.querySelector('h3')?.textContent || '').toLowerCase();
+        card.style.display = title.includes(q) || title === '' ? '' : 'none';
+      });
+    });
+  }
+
+  // 2) FAQ / accordion (toggle panels)
+  const accBtns = document.querySelectorAll('.accordion-btn');
+  accBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+      // optionally close other accordions: uncomment block to only allow one open at a time
+      // accBtns.forEach(b => { if (b !== btn) { b.nextElementSibling.style.maxHeight = null; }});
+      if (open) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // 3) Footer current time (updates every second) — updates any element with id footerTime / footerTime2
+  function updateFooterTime() {
+    const now = new Date();
+    const s = String(now.getSeconds()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const h = String(now.getHours()).padStart(2,'0');
+    const timeStr = `${h}:${m}:${s}`;
+    const t1 = document.getElementById('footerTime');
+    const t2 = document.getElementById('footerTime2');
+    if (t1) t1.textContent = timeStr;
+    if (t2) t2.textContent = timeStr;
+  }
+  updateFooterTime();
+  setInterval(updateFooterTime, 1000);
+});
+// lightbox.js
+document.addEventListener('DOMContentLoaded', () => {
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImage');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+
+  if (!triggers.length || !lb) return;
+
+  const images = Array.from(triggers).map(img => img.dataset.full || img.src);
+  let currentIndex = 0;
+
+  function show(index) {
+    currentIndex = (index + images.length) % images.length;
+    lbImg.src = images[currentIndex];
+    lb.style.display = 'flex';
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hide() {
+    lb.style.display = 'none';
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach((t, i) => {
+    t.addEventListener('click', () => show(i));
+  });
+
+  lbClose.addEventListener('click', hide);
+
+  lbPrev.addEventListener('click', () => show(currentIndex - 1));
+  lbNext.addEventListener('click', () => show(currentIndex + 1));
+
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) hide();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (lb.style.display !== 'flex') return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') show(currentIndex - 1);
+    if (e.key === 'ArrowRight') show(currentIndex + 1);
+  });
+});

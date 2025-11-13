@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Tee Networks</title>
+  <meta name="description" content="Learn about Tee Networks’ mission, vision, and global telecommunications goals." />
+  <meta name="keywords" content="About Tee Networks, telecommunications company, Mukuru, Capitec, communication services" />
   <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <nav>
       <h1>Tee Networks</h1>
@@ -23,75 +23,57 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>About Tee Networks</h2>
-      <p>Connecting the world through reliable and affordable telecommunications solutions.</p>
-      <img src="../Assets/international-sim-cards-with-flags-isolated-on-white-background-FB3BRY.jpg" alt="Tee Networks Team">
+  <section id="hero">
+    <h2>About Tee Networks</h2>
+    <p>Connecting the world through reliable and affordable telecommunications solutions.</p>
+    <img src="../Assets/team-meeting.jpg" alt="Tee Networks Team">
+  </section>
+
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>To be the leading global SIM provider, making communication simple, fast, and affordable for everyone worldwide.</p>
+  </section>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>We aim to provide top-quality telecommunication solutions that bridge distances and bring people together — no matter where they are.</p>
+  </section>
+
+  <section id="values">
+    <h2>Our Core Values</h2>
+    <ul>
+      <li><strong>Customer-Centric:</strong> You are at the heart of everything we do.</li>
+      <li><strong>Innovation:</strong> We continuously explore new ways to improve connectivity.</li>
+      <li><strong>Integrity:</strong> Transparency and trust define our partnerships.</li>
+      <li><strong>Reliability:</strong> Dependable services for businesses and individuals alike.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">Where can I use my Tee Networks SIM card?</div>
+      <div class="faq-answer">Our SIM cards work in over 180 countries with strong network partnerships globally.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer business packages?</div>
+      <div class="faq-answer">Yes, we provide tailored telecommunication solutions for small and large enterprises.</div>
     </div>
   </section>
 
-  <!-- Accordion Section -->
-  <section class="accordion-section">
-    <h2>Who We Are</h2>
-
-    <button class="accordion">Our Vision</button>
-    <div class="panel">
-      <p>Our vision is to become the leading global SIM provider, ensuring everyone stays connected with loved ones across the world. We aim to make communication simple, fast, and affordable—globally, not just in South Africa.</p>
-    </div>
-
-    <button class="accordion">Our Mission</button>
-    <div class="panel">
-      <p>We strive to provide high-quality, affordable SIM card services with competitive packages tailored for personal, business, and international communication needs. Our mission is to remove barriers, making communication effortless for everyone.</p>
-    </div>
-
-    <button class="accordion">Our Core Values</button>
-    <div class="panel">
-      <ul>
-        <li><strong>Customer-Centric:</strong> Prioritizing your needs and satisfaction.</li>
-        <li><strong>Innovation:</strong> Continuously improving technology solutions.</li>
-        <li><strong>Integrity:</strong> Honest, transparent, and ethical practices.</li>
-        <li><strong>Reliability:</strong> Services you can count on 24/7.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section id="team">
-    <h2>Meet Our Partners</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <img src="../Assets/Collage-Maker-18-Nov-2022-05.58-PM-1.jpg" alt="Mr Rob Burrell">
-        <h3>Mr Rob Burrell</h3>
-        <p>CEO of Mukuru and shareholder of Tee Networks</p>
-      </div>
-      <div class="team-member">
-        <img src="../Assets/OIP.webp" alt="Mr Michiel Le Roux">
-        <h3>Mr Michiel Le Roux</h3>
-        <p>Founder of Capitec and co-founder of Tee Networks</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta">
-    <h2>Join Tee Networks Today</h2>
-    <p>Discover affordable solutions for personal or business communication.</p>
-    <a href="./contact us.html" class="cta-button">Contact Us</a>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
     <p>&copy; 2025 Tee Networks (Telecommunications). All rights reserved.</p>
   </footer>
-  <script src="../js/script.js"></script>
-  <script src="../js/acc.js"></script>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const ans = q.nextElementSibling;
+        ans.style.display = ans.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
+
+
